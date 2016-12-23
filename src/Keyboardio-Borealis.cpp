@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Borealis.h"
+#include "Keyboardio-Borealis.h"
 
 BorealisEffect::BorealisEffect (void) {
   LEDControl.mode_add (this);
