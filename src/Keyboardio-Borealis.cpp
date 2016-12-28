@@ -18,12 +18,11 @@
 
 #include "Keyboardio-Borealis.h"
 
-BorealisEffect::BorealisEffect (void) {
-  LEDControl.mode_add (this);
+BorealisEffect_::BorealisEffect_ (void) {
 }
 
 void
-BorealisEffect::update (void) {
+BorealisEffect_::update (void) {
   static cRGB colors[] = {
     {0x5f, 0x2d, 0x67},
     {0x8e, 0x4b, 0x7e},

@@ -20,11 +20,11 @@
 
 #include <KeyboardioFirmware.h>
 
-class BorealisEffect : public LEDMode {
+class BorealisEffect_ : public LEDMode {
  public:
-  BorealisEffect (void);
+  BorealisEffect_ (void);
 
   virtual void update (void) final;
 };
 
-static BorealisEffect borealisEffect;
+extern BorealisEffect_ BorealisEffect;
