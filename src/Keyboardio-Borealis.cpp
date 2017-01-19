@@ -50,3 +50,5 @@ BorealisEffect_::update (void) {
   led_set_crgb_at (3, 6, colors[5]);
   led_set_crgb_at (3, 9, colors[5]);
 }
+
+BorealisEffect_ BorealisEffect;
