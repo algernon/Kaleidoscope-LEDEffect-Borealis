@@ -1,6 +1,6 @@
 /* -*- mode: c++ -*-
  * Keyboardio-Borealis -- Borealis-inspired color scheme
- * Copyright (C) 2016  Gergely Nagy
+ * Copyright (C) 2016, 2017  Gergely Nagy
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,13 +16,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <KeyboardioFirmware.h>
+#include "KeyboardioFirmware.h"
 
 #include "LED-Off.h"
-
-static LEDOff LEDOffEffect;
-
-#include "Borealis.h"
+#include "Keyboardio-Borealis.h"
 
 const Key keymaps[][ROWS][COLS] PROGMEM = {
   [0] = KEYMAP_STACKED
@@ -46,8 +43,10 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 };
 
 void setup () {
+  Keyboardio.use (&BorealisEffect, NULL);
+
   Keyboardio.setup (KEYMAP_SIZE);
-  borealisEffect.activate ();
+  BorealisEffect.activate ();
 }
 
 void loop () {
