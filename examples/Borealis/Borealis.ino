@@ -17,9 +17,9 @@
  */
 
 #include "KeyboardioFirmware.h"
+#include "Keyboardio-Borealis.h"
 
 #include "LED-Off.h"
-#include "Keyboardio-Borealis.h"
 
 const Key keymaps[][ROWS][COLS] PROGMEM = {
   [0] = KEYMAP_STACKED
@@ -43,7 +43,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 };
 
 void setup () {
-  Keyboardio.use (&BorealisEffect, NULL);
+  Keyboardio.use (&BorealisEffect, &LEDOff, NULL);
 
   Keyboardio.setup (KEYMAP_SIZE);
   BorealisEffect.activate ();

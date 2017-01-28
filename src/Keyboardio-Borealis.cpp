@@ -1,6 +1,6 @@
 /* -*- mode: c++ -*-
  * Keyboardio-Borealis -- Borealis-inspired color scheme
- * Copyright (C) 2016  Gergely Nagy
+ * Copyright (C) 2016, 2017  Gergely Nagy
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -35,20 +35,20 @@ BorealisEffect_::update (void) {
   // Update all the LEDs, each row with its own color.
   for (byte row = 0; row < ROWS; row++) {
     for (byte col = 0; col < COLS; col++) {
-      led_set_crgb_at (row, col, colors[row]);
+      LEDControl.led_set_crgb_at (row, col, colors[row]);
     }
   }
 
   // Override the thumb arcs, they should be treated as their own row.
   for (byte row = 0; row < 4; row++) {
     for (byte col = 7; col < 9; col++) {
-      led_set_crgb_at (row, col, colors[4]);
+      LEDControl.led_set_crgb_at (row, col, colors[4]);
     }
   }
 
   // Override the palm keys too, they are the final row.
-  led_set_crgb_at (3, 6, colors[5]);
-  led_set_crgb_at (3, 9, colors[5]);
+  LEDControl.led_set_crgb_at (3, 6, colors[5]);
+  LEDControl.led_set_crgb_at (3, 9, colors[5]);
 }
 
 BorealisEffect_ BorealisEffect;
