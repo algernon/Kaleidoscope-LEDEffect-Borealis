@@ -1,5 +1,5 @@
 /* -*- mode: c++ -*-
- * Keyboardio-Borealis -- Borealis-inspired color scheme
+ * Kaleidoscope-LEDEffect-Borealis -- Borealis-inspired color scheme
  * Copyright (C) 2016, 2017  Gergely Nagy
  *
  * This program is free software: you can redistribute it and/or modify
@@ -16,8 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "KeyboardioFirmware.h"
-#include "Keyboardio-Borealis.h"
+#include "Kaleidoscope.h"
+#include "Kaleidoscope-LEDEffect-Borealis.h"
 
 #include "LED-Off.h"
 
@@ -43,12 +43,12 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 };
 
 void setup () {
-  Keyboardio.use (&BorealisEffect, &LEDOff, NULL);
+  Kaleidoscope.use (&BorealisEffect, &LEDOff, NULL);
 
-  Keyboardio.setup (KEYMAP_SIZE);
+  Kaleidoscope.setup (KEYMAP_SIZE);
   BorealisEffect.activate ();
 }
 
 void loop () {
-  Keyboardio.loop ();
+  Kaleidoscope.loop ();
 }

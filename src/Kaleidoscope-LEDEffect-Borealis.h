@@ -1,5 +1,5 @@
 /* -*- mode: c++ -*-
- * Keyboardio-Borealis -- Borealis-inspired color scheme
+ * Kaleidoscope-Borealis -- Borealis-inspired color scheme
  * Copyright (C) 2016, 2017  Gergely Nagy
  *
  * This program is free software: you can redistribute it and/or modify
@@ -18,8 +18,8 @@
 
 #pragma once
 
-#include <KeyboardioFirmware.h>
-#include <Keyboardio-LEDControl.h>
+#include <Kaleidoscope.h>
+#include <Kaleidoscope-LEDControl.h>
 
 class BorealisEffect_ : public LEDMode {
  public:
