@@ -13,5 +13,6 @@ install:
 script:
   - export DEFAULT_SKETCH=$(cd examples; basename *)
   - export ARDUINO_PATH=$(pwd)/../arduino-1.6.11
+  - export BOARD_HARDWARE_PATH=$(pwd)/hardware
   - export EXTRA_BUILDER_ARGS="-libraries ."
   - hardware/keyboardio/avr/libraries/Kaleidoscope/tools/kaleidoscope-builder build
