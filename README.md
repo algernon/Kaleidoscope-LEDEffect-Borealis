@@ -1,5 +1,10 @@
 # Borealis-inspired color scheme
 
+[![Build Status][travis:image]][travis:status]
+
+ [travis:image]: https://travis-ci.org/algernon/Kaleidoscope-LEDEffect-Borealis.svg?branch=master
+ [travis:status]: https://travis-ci.org/algernon/Kaleidoscope-LEDEffect-Borealis
+
 This is a [Borealis][borealis]-inspired color scheme for
 the [Keyboardio Model 01][m01], a plugin for [Kaleidoscope][firmware].
 
