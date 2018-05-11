@@ -24,9 +24,9 @@
 namespace kaleidoscope {
 class BorealisEffect : public LEDMode {
  public:
-  BorealisEffect(void) {};
+  BorealisEffect(void) {}
 
-  virtual void update(void) final;
+  void update(void) final;
 };
 }
 
