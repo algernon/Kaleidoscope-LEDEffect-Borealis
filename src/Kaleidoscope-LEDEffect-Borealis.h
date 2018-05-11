@@ -1,6 +1,6 @@
 /* -*- mode: c++ -*-
  * Kaleidoscope-Borealis -- Borealis-inspired color scheme
- * Copyright (C) 2016, 2017  Gergely Nagy
+ * Copyright (C) 2016, 2017, 2018  Gergely Nagy
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,11 +21,13 @@
 #include <Kaleidoscope.h>
 #include <Kaleidoscope-LEDControl.h>
 
-class BorealisEffect_ : public LEDMode {
+namespace kaleidoscope {
+class BorealisEffect : public LEDMode {
  public:
-  BorealisEffect_ (void);
+  BorealisEffect(void) {};
 
-  virtual void update (void) final;
+  virtual void update(void) final;
 };
+}
 
-extern BorealisEffect_ BorealisEffect;
+extern kaleidoscope::BorealisEffect BorealisEffect;
