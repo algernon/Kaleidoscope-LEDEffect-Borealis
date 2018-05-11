@@ -20,7 +20,7 @@
 
 namespace kaleidoscope {
 
-void BorealisEffect::update (void) {
+void BorealisEffect::update(void) {
   static cRGB colors[] = {
     {0x5f, 0x2d, 0x67},
     {0x8e, 0x4b, 0x7e},
@@ -33,20 +33,20 @@ void BorealisEffect::update (void) {
   // Update all the LEDs, each row with its own color.
   for (byte row = 0; row < ROWS; row++) {
     for (byte col = 0; col < COLS; col++) {
-      ::LEDControl.setCrgbAt (row, col, colors[row]);
+      ::LEDControl.setCrgbAt(row, col, colors[row]);
     }
   }
 
   // Override the thumb arcs, they should be treated as their own row.
   for (byte row = 0; row < 4; row++) {
     for (byte col = 7; col < 9; col++) {
-      ::LEDControl.setCrgbAt (row, col, colors[4]);
+      ::LEDControl.setCrgbAt(row, col, colors[4]);
     }
   }
 
   // Override the palm keys too, they are the final row.
-  ::LEDControl.setCrgbAt (3, 6, colors[5]);
-  ::LEDControl.setCrgbAt (3, 9, colors[5]);
+  ::LEDControl.setCrgbAt(3, 6, colors[5]);
+  ::LEDControl.setCrgbAt(3, 9, colors[5]);
 }
 }
 

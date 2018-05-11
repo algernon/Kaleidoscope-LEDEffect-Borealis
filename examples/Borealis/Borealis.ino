@@ -21,6 +21,7 @@
 
 #include "LED-Off.h"
 
+// *INDENT-OFF*
 const Key keymaps[][ROWS][COLS] PROGMEM = {
   [0] = KEYMAP_STACKED
   (
@@ -41,14 +42,15 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_NoKey
   ),
 };
+// *INDENT-ON*
 
-void setup () {
-  Kaleidoscope.use (&BorealisEffect, &LEDOff);
+void setup() {
+  Kaleidoscope.use(&BorealisEffect, &LEDOff);
 
-  Kaleidoscope.setup ();
-  BorealisEffect.activate ();
+  Kaleidoscope.setup();
+  BorealisEffect.activate();
 }
 
-void loop () {
-  Kaleidoscope.loop ();
+void loop() {
+  Kaleidoscope.loop();
 }
