@@ -44,9 +44,11 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 };
 // *INDENT-ON*
 
-void setup() {
-  Kaleidoscope.use(&BorealisEffect, &LEDOff);
+KALEIDOSCOPE_INIT_PLUGINS(LEDControl,
+                          BorealisEffect,
+                          LEDOff);
 
+void setup() {
   Kaleidoscope.setup();
   BorealisEffect.activate();
 }
